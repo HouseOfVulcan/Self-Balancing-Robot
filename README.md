@@ -3,6 +3,19 @@
 An embedded systems course project — a two-wheeled self-balancing robot built on the **Yahboom** platform using an **STM32F103RCT6** microcontroller. The firmware is written from scratch module-by-module using the Yahboom source as a reference implementation.
 
 ---
+## Project Status
+
+| Module | Status |
+|---|---|
+| Architecture | ✅ Complete |
+| Motors (PWM) | ✅ Complete |
+| Encoders | ✅ Complete |
+| OLED Display | ✅ Complete |
+| IMU / DMP | 🔧 In Progress |
+| PID Control | ⬜ Not Started |
+| PS2 Wireless | ⬜ Not Started |
+
+---
 
 ## Hardware
 
@@ -94,19 +107,7 @@ Three cascaded controllers run on the 10ms tick:
 
 ---
 
-## Project Status
 
-| Module | Status |
-|---|---|
-| Architecture | ✅ Complete |
-| Motors (PWM) | ✅ Complete |
-| Encoders | ✅ Complete |
-| OLED Display | ✅ Complete |
-| IMU / DMP | 🔧 In Progress |
-| PID Control | ⬜ Not Started |
-| PS2 Wireless | ⬜ Not Started |
-
----
 
 ## Known Issues / Design Notes
 
