@@ -116,7 +116,3 @@ Three cascaded controllers run on the 10ms tick:
 
 ---
 
-## Course
-
-Embedded Systems — Self-Balancing Robot  
-Yahboom STM32 Platform
