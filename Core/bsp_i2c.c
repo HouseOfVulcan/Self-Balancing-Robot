@@ -61,5 +61,34 @@ void i2c_stop(void) {
 
 
 uint8_t i2c_send_byte(uint8_t byte) {
+	uint8_t mask = 0x80;
 
+	SCL_low();
+
+	for (int i = 0; i < 8; i++) {
+		if (byte & mask) {
+			SDA_high();
+			delay_us(I2C_DELAY_US);
+
+		} else {
+			SDA_low();
+			delay_us(I2C_DELAY_US);
+		}
+		// move the byte
+		SCL_high();
+		delay_us(I2C_DELAY_US);
+		SCL_low();
+
+		byte <<= 1;
+	}
+
+	// read ACK
+	SDA_high();
+	delay_us(I2C_DELAY_US);
+	SCL_high();
+	delay_us(I2C_DELAY_US);
+	uint8_t ack = SDA_read();
+	SCL_low();
+
+	return ack;
 }
